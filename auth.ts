@@ -5,14 +5,14 @@ import FacebookProvider from "next-auth/providers/facebook"
 
 const AUTH_GOOGLE_ID = process.env.AUTH_GOOGLE_ID!
 const AUTH_GOOGLE_SECRET = process.env.AUTH_GOOGLE_SECRET!
-// const FACEBOOK_CLIENT_ID = process.env.FACEBOOK_CLIENT_ID!
-// const FACEBOOK_CLIENT_SECRET = process.env.FACEBOOK_CLIENT_SECRET!
+const FACEBOOK_CLIENT_ID = process.env.FACEBOOK_CLIENT_ID!
+const FACEBOOK_CLIENT_SECRET = process.env.FACEBOOK_CLIENT_SECRET!
 const AUTH_SECRET = process.env.AUTH_SECRET!
 
 const config = {
     providers: [
         GoogleProvider({ clientId: AUTH_GOOGLE_ID, clientSecret: AUTH_GOOGLE_SECRET }),
-        // FacebookProvider({clientId: FACEBOOK_CLIENT_ID, clientSecret: FACEBOOK_CLIENT_SECRET })
+        FacebookProvider({clientId: FACEBOOK_CLIENT_ID, clientSecret: FACEBOOK_CLIENT_SECRET })
     ],
     secret: AUTH_SECRET,
     // callbacks: {
