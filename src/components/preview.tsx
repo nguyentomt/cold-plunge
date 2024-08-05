@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-// import { SignIn } from "./sign-in";
+import { SignIn } from "./sign-in";
 
 
 
@@ -33,7 +33,7 @@ export default function Preview() {
           </p>
           <div className="absolute w-screen top-3/4">
             <div className="flex flex-col gap-4 items-center">
-              {/* <SignIn /> */}
+              <SignIn />
               <Link
                 href="/book"
                 className="bg-transparent w-36 text-center leading-loose px-4 rounded-full border-2 border-white transition duration-300 hover:bg-white hover:text-black"

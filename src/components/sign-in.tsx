@@ -1,10 +1,9 @@
 import { auth, signIn, signOut } from "../../auth";
-import Image from "next/image";
+// import { getServerSession } from "next-auth";
+
 
 export async function SignIn() {
-    const session = await auth();
-
-
+  const session = await auth();
 
   return (
     <>
