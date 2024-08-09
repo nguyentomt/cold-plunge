@@ -10,7 +10,7 @@ export default function Preview() {
       <div className="h-screen flex flex-col items-center">
         <div id="video-container" className="relative w-screen h-screen">
           <video
-            src="/meta-promo.mp4"
+            src="/lofilab.mp4"
             autoPlay
             muted
             loop
