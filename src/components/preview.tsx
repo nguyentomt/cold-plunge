@@ -14,6 +14,7 @@ export default function Preview() {
             autoPlay
             muted
             loop
+            playsInline
             className="-z-1 w-[100vw] h-[100vh] opacity-70 inset-0 absolute object-cover "
           />
           <div className="absolute w-screen">
