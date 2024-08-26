@@ -14,8 +14,7 @@ export default function Preview() {
             muted
             autoPlay
             loop
-            playsinline
-            defaultMuted
+            playsInline
             className="-z-1 w-[100vw] h-[100vh] opacity-70 inset-0 absolute object-cover "
           >
             <source src="/lofilab.mp4" type="video/mp4" />
