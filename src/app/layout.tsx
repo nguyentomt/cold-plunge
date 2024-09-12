@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
-import Provider from "./providers";
+// import Provider from "./providers";
 import { Analytics } from "@vercel/analytics/react";
+import NavWrapper from "@/components/nav-wrapper";
 
 const roboto = Roboto({ weight: "500", subsets: ["latin"] });
 
@@ -19,10 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <Provider>
+        {/* <Provider> */}
+          <NavWrapper />
           {children}
           <Analytics />
-        </Provider></body>
+        {/* </Provider> */}
+        </body>
     </html>
   );
 }

@@ -18,17 +18,66 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-    background-attachment: fixed;
+  background-image: url(/bg-image.jpg);
+  background-size: cover;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 2rem;
+  backdrop-filter: blur(5px);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  transition-duration: 400ms;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.2s linear;
+}
+
+.dropdown-content a {
+  text-shadow: 0.5px 0.5px 0.5px #000;
+  font-size: small;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ccc;  transition-duration: 300ms;}
+
+.dropdown:hover .dropdown-content {  
+  visibility: visible;
+  opacity: 1;
+}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.text-border {
+  text-shadow: 1px 1px 1px #404040;  
+}
+
+h1 {
+  font-size: xx-large;
+}
+
+h2 {
+  font-size: x-large;
 }
