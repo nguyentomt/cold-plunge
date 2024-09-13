@@ -23,7 +23,7 @@ export default function Preview() {
           <div className="absolute w-screen">
             
             <div className="flex flex-col gap-2 items-center justify-center pt-32 w-screen">
-            <h1 className="shadow text-border text-4xl p-4">Cold Plunge & Sauna in Huntington Beach</h1>
+            <h1 className="shadow text-border text-center text-4xl p-4">Cold Plunge & Sauna in Huntington Beach</h1>
             <p className="text-border text-2xl w-3/4 md:w-1/2 text-center">Unlock the power of contrast therapy.</p>
             <p className="text-border text-2xl w-3/4 md:w-1/2 text-center">Recover faster, feel stronger.</p>
 
