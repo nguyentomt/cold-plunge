@@ -132,9 +132,7 @@ export default function Nav() {
                         id={e.title}
                         href={e.href}
                         onMouseDown={() => setItem(i)}
-                        className={`px-10 py-1 text-white font-extrabold text-border dropdown-btn transition duration-500 ${
-                          item == i ? "" : ""
-                        } hover:shadow-md`}
+                        className={`px-10 py-1 text-white font-extrabold text-border dropdown-btn transition duration-500 hover:shadow-md`}
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -168,9 +166,7 @@ export default function Nav() {
                       id={e.title}
                       href={e.href}
                       onMouseDown={() => setItem(i)}
-                      className={`px-10 py-1 text-white font-extrabold text-border transition duration-500 ${
-                        item == i ? "" : ""
-                      } hover:shadow-md`}
+                      className={`px-10 py-1 text-white font-extrabold text-border transition duration-500 hover:shadow-md`}
                     >
                       {e.title}
                     </Link>
