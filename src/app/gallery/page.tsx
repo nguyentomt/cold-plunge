@@ -37,7 +37,7 @@ const Gallery = () => {
   return (
     <div className="flex flex-row w-screen items-center justify-center gap-0 overscroll-x-auto md:pt-20">
       <article
-        className="w-screen h-screen pt-14 md:pt-0 md:h-full flex flex-col items-center"
+        className="w-screen h-screen pt-[4.5rem] md:pt-0 md:h-full flex flex-col items-center"
         style={{  aspectRatio: "3 / 2" }}
       >
         {/* <button
@@ -49,7 +49,7 @@ const Gallery = () => {
 
         <Lightbox plugins={[Inline, Thumbnails, Captions]} slides={pictures} />
       </article>
-      <Lightbox
+      {/* <Lightbox
         plugins={[
           Captions,
           Thumbnails,
@@ -63,7 +63,7 @@ const Gallery = () => {
         open={open}
         close={() => setOpen(false)}
         slides={pictures}
-      />
+      /> */}
     </div>
   );
 };

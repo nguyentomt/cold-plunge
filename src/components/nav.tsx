@@ -60,7 +60,7 @@ export default function Nav() {
         className={`bg-transparent flex justify-center items-center w-screen border-b-1 border-white mb-3 px-8 shadow-md shadow-gray-500`}
       >
         {/* Hamburger menu */}
-        <div className="w-full z-40 flex justify-center gap-8 items-center md:hidden">
+        <div className="w-full z-40 flex justify-center gap-20 py-2 items-center md:hidden">
           <Link href="/" onClick={() => setItem(0)}>
             <Image
               src="/metalabs-logo.svg"
