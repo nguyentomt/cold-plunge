@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Nav() {
   const [isOpen, setOpen] = useState(false);
-  const [item, setItem] = useState(null);
+  const [item, setItem] = useState(4);
 
   const toggleMobileMenu = () => {
     setOpen(!isOpen);
