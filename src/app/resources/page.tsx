@@ -46,9 +46,9 @@ const Resources = () => {
           </div>
         </div>
 
-        <h2 id="wim-hof" className="w-screen h-screen pl-4">
+        {/* <h2 id="wim-hof" className="w-screen h-screen pl-4">
           Wim Hof Method
-        </h2>
+        </h2> */}
       </div>
     </article>
   );

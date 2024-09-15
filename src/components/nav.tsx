@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Nav() {
   const [isOpen, setOpen] = useState(false);
-  const [item, setItem] = useState(0);
+  const [item, setItem] = useState(null);
 
   const toggleMobileMenu = () => {
     setOpen(!isOpen);
@@ -34,10 +34,10 @@ export default function Nav() {
           name: "Contrast Therapy",
           href: '/resources#contrast'
         },
-        {
-          name: "Wim Hof Method",
-          href: '/resources#wim-hof'
-        },
+        // {
+        //   name: "Wim Hof Method",
+        //   href: '/resources#wim-hof'
+        // },
       ],
     },
     {
