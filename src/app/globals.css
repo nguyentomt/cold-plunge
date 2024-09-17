@@ -85,3 +85,7 @@ h2 {
 /* .vid {
   padding-bottom: 100% !important;
 } */
+
+.iframe {
+  caret-color: transparent;
+}

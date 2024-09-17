@@ -132,7 +132,7 @@ export default function Nav() {
                         id={e.title}
                         href={e.href}
                         onMouseDown={() => setItem(i)}
-                        className={`px-10 py-1 text-white font-extrabold text-border dropdown-btn transition duration-500 hover:shadow-md`}
+                        className={`px-10 py-1 text-white font-extrabold hover:cursor-pointer text-border dropdown-btn transition duration-500 hover:shadow-md`}
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -153,7 +153,7 @@ export default function Nav() {
                       <div className="dropdown-content text-white rounded-md">
                         {e.options.map((e, i) => {
                           return (
-                            <a href={e.href} key={i}>
+                            <a href={e.href} key={i} className="hover:cursor-pointer">
                               {e.name}
                             </a>
                           );
@@ -166,7 +166,7 @@ export default function Nav() {
                       id={e.title}
                       href={e.href}
                       onMouseDown={() => setItem(i)}
-                      className={`px-10 py-1 text-white font-extrabold text-border transition duration-500 hover:shadow-md`}
+                      className={`px-10 py-1 text-white font-extrabold hover:cursor-pointer text-border transition duration-500 hover:shadow-md`}
                     >
                       {e.title}
                     </Link>
