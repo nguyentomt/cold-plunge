@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const Booking = () => {
     return (
-        <section className="w-screen h-screen flex flex-col justify-center items-center">
-            <iframe src="https://booking.mangomint.com/metalabscoldplungesauna" title="Cold plunge booking form by Mango Mint" className="w-screen h-[669px] lg:w-[469px] iframe"></iframe>
+        <section className="w-screen h-screen flex flex-col justify-center items-center py-20">
+            <iframe src="https://booking.mangomint.com/metalabscoldplungesauna" title="Cold plunge booking form by Mango Mint" className="w-[90%] h-[669px] lg:w-[469px] iframe"></iframe>
         </section>
     )
     
