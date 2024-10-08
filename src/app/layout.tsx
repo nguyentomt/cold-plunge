@@ -4,6 +4,7 @@ import "./globals.css";
 // import Provider from "./providers";
 import { Analytics } from "@vercel/analytics/react";
 import NavWrapper from "@/components/nav-wrapper";
+import Nav from "@/components/nav";
 
 const mulish = Mulish({ weight: "600", subsets: ["latin"] });
 
@@ -21,7 +22,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={mulish.className}>
         {/* <Provider> */}
-          <NavWrapper />
+          {/* <NavWrapper /> */}
+          <Nav />
           {children}
           <Analytics />
         {/* </Provider> */}

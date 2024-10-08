@@ -18,8 +18,12 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-image: url(/bg-image.jpg);
+  display: relative;
+  background-image: url(/bg-wide.png);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 @layer utilities {

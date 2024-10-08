@@ -19,7 +19,7 @@ export default function Preview() {
           >
             <source src="/lofilab.mp4" type="video/mp4" />
           </video> */}
-          <Image src="/9.jpg" width="1024" height="669" className="absolute object-cover h-screen md:w-screen" alt="Meta Labs Logo" />
+          
           <div className="absolute w-screen">
             
             <div className="flex flex-col gap-2 items-center justify-center pt-32 w-screen">
