@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import Link from "next/link";
 import {
   Captions,
   Thumbnails,
@@ -35,7 +36,7 @@ const Gallery = () => {
   ];
 
   return (
-    <div className="flex flex-row w-screen items-center justify-center gap-0 overscroll-x-auto lg:pt-28 z-50">
+    <div className="flex flex-col w-screen items-center justify-center gap-0 overscroll-x-auto lg:pt-28 z-50">
       <article
         className="w-screen h-screen md:w-3/4 pt-[5.5rem] md:pt-0 md:h-full flex flex-col items-center"
         style={{  aspectRatio: "3 / 2" }}
@@ -64,6 +65,10 @@ const Gallery = () => {
         close={() => setOpen(false)}
         slides={pictures}
       /> */}
+
+<Link href="/book" className="z-10 my-4 lg:hidden book-shadow font-bold text-gray-900 text-center py-4 px-8 text-4xl  bg-gray-50 bg-opacity-60 hover:bg-opacity-90 rounded-3xl border border-gray-500">
+        Book Now
+      </Link>
     </div>
   );
 };
