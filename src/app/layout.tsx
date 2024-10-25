@@ -6,7 +6,7 @@ import { Analytics } from "@vercel/analytics/react";
 import NavWrapper from "@/components/nav-wrapper";
 import Nav from "@/components/nav";
 
-const mulish = Mulish({ weight: "600", subsets: ["latin"] });
+const mulish = Mulish({ weight: ["600", "700"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Meta Labs Cold Plunge",

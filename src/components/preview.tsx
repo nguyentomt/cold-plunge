@@ -45,7 +45,7 @@ export default function Preview() {
               {/* <SignIn /> */}
               <Link
                 href="/book"
-                className="hover:bg-transparent hover:text-white w-36 text-center leading-loose px-4 rounded-full border-2 border-white transition duration-300 bg-white text-black"
+                className="hover:bg-transparent hover:text-white w-48 text-center py-2 text-lg px-8 rounded-full border-2 border-white transition duration-300 bg-white text-black"
               >
                 Cold Plunge
               </Link>

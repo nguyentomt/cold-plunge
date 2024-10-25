@@ -1,9 +1,16 @@
+import Link from "next/link";
+
 const Experience = () => {
   return (
-    <article className="flex flex-col gap-4 items-center pt-24 text-border w-screen overflow-clip">
-      <div className="w-4/5">
-        <h1>Experience</h1>
+    <article className="flex flex-col gap-4 items-center pt-24 lg:pt-32 w-screen overflow-clip">
+      <div className="w-4/5 lg:w-1/3">
+        <div className="w-full bg-gray-100 lg:text-xl p-4 rounded-3xl text-gray-800 text-justify">
+        Meta labs is a communal space built for members to train, learn and share their experiences of basic hot and cold practices and their respective effects on the human body. We believe this knowledge is every man’s responsibility to behold, and insodoing, we could together better the health of our communities all the while supporting our government to curb today’s fast growing mental crisis. We welcome you to join our family of wellness enthusiasts on our journey of work, knowledge, and better mental awareness today.
+        <div className="pt-4 text-red-500 font-bold">Click here to schedule your visit.</div>
 
+        </div>
+
+        {/* <h1>Experience</h1>
         <section className="py-4 flex flex-col md:flex-row-reverse">
           <div className="md:w-2/3">
             <h2 id="dunk">Slam Dunk</h2>
@@ -35,8 +42,11 @@ const Experience = () => {
               <source src="/lofilab.mp4" type="video/mp4" />
             </video>
           </div>
-        </section>
+        </section> */}
       </div>
+      <Link href="/book" className="z-10 lg:hidden book-shadow font-bold text-gray-900 text-center py-4 px-8 text-4xl  bg-gray-50 bg-opacity-60 hover:bg-opacity-90 rounded-3xl border border-gray-500">
+        Book Now
+      </Link>
     </article>
   );
 };

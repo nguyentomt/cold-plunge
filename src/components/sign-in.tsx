@@ -1,5 +1,4 @@
 import { auth, signIn, signOut } from "../../auth";
-// import { getServerSession } from "next-auth";
 
 
 export async function SignIn() {

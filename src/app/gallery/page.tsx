@@ -21,23 +21,23 @@ const Gallery = () => {
 
   const pictures = [
     // { src: "/1.jpg", title: "Lounge", description: "Description 1" },
+    { src: "/8.jpg" },
+    { src: "/9.jpg" },
+    { src: "/10.jpg" },
+    { src: "/11.jpg" },
     { src: "/1.jpg" },
     { src: "/2.jpg" },
     { src: "/3.jpg" },
     { src: "/4.jpg" },
     { src: "/5.jpg" },
-    { src: "/6.jpg" },
     { src: "/7.jpg" },
-    { src: "/8.jpg" },
-    { src: "/9.jpg" },
-    { src: "/10.jpg" },
-    { src: "/11.jpg" },
+    { src: "/6.jpg" },
   ];
 
   return (
-    <div className="flex flex-row w-screen items-center justify-center gap-0 overscroll-x-auto md:pt-20">
+    <div className="flex flex-row w-screen items-center justify-center gap-0 overscroll-x-auto lg:pt-28 z-50">
       <article
-        className="w-screen h-screen md:w-3/4 pt-[4.5rem] md:pt-0 md:h-full flex flex-col items-center"
+        className="w-screen h-screen md:w-3/4 pt-[5.5rem] md:pt-0 md:h-full flex flex-col items-center"
         style={{  aspectRatio: "3 / 2" }}
       >
         {/* <button

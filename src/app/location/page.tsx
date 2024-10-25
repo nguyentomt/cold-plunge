@@ -2,7 +2,7 @@
 
 const Location = () => {
     return (
-      <article className="flex flex-col gap-4 items-center w-full pt-24 text-border">
+      <article className="flex flex-col gap-4 items-center w-full pt-24 lg:pt-28 text-border">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106197.81309214969!2d-118.15205920273439!3d33.7171854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd27e38dcc6079%3A0x3be5ba8928f9b108!2sMeta%20Labs%20Cold%20Plunge!5e0!3m2!1sen!2sus!4v1719851470721!5m2!1sen!2sus"
           className="w-screen lg:w-[669px] h-[469px]"
