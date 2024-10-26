@@ -28,7 +28,7 @@ export default function Nav() {
     },
     {
       title: "members",
-      href: "/resources",
+      href: "/members",
       //   options: [
       //     {
       //       name: "Contrast Therapy",
