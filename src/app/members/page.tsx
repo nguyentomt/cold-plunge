@@ -34,13 +34,19 @@ const Members = () => {
       member: "Adam Hess",
       src: "https://www.youtube.com/embed/GdSABVbDFnE?si=fjES6S-LqQQLME61",
     },
+    {
+      member: "Ben Anda",
+      src: "https://www.youtube.com/embed/aibgb4R4-Bs?si=-ned0o2tu9Jd3jTA",
+    },
+
+    
   ];
 
   return (
     <section className="flex flex-col lg:flex-row lg:flex-wrap gap-8 w-screen items-center justify-center pt-32 lg:pt-40 pb-16">
-      {videos.map((vid) => {
+      {videos.map((vid, i) => {
         return (
-          <div className="object-fit flex justify-center w-full lg:w-1/4">
+          <div key={i} className="object-fit flex justify-center w-full lg:w-1/4">
             <iframe
               src={vid.src}
               className="w-[80%] h-48 rounded-3xl bg-black"
