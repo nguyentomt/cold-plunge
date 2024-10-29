@@ -57,7 +57,7 @@ export default function Nav() {
   return (
     <div
       id="nav-container"
-      className=" mt-4 w-screen absolute h-screen flex flex-col items-center"
+      className=" mt-4 w-screen absolute z-40 flex flex-col items-center"
     >
       <nav
         className={`bg-gray-300 bg-opacity-30 flex justify-center items-center w-screen border-b-1 border-white mb-3 pl-8 shadow-sm shadow-gray-500`}
@@ -84,7 +84,7 @@ export default function Nav() {
                     onMouseDown={() => setItem(i)}
                     className={`py-1 text-xl ${
                       i == item ? `text-blue-600` : `text-white`
-                    } font-extrabold text-border transition duration-500 hover:shadow-md`}
+                    } font-extrabold transition duration-500 hover:shadow-md`}
                   >
                     {e.title}
                   </Link>
@@ -129,7 +129,7 @@ export default function Nav() {
         </div>
 
         {/* Menu Items */}
-        <div className="hidden md:flex items-center transition duration-400 w-[90%] justify-center z-10">
+        <div className="hidden md:flex items-center transition duration-400 z-40 w-[90%] justify-center">
           <Link href="/" onClick={() => setItem(0)}>
             <Image
               src="/metalabs-logo.svg"
@@ -153,7 +153,7 @@ export default function Nav() {
                     onMouseDown={() => setItem(i)}
                     className={`py-1 text-xl ${
                       i == item ? `text-blue-600` : `text-white`
-                    } font-extrabold text-border transition duration-500 hover:shadow-md`}
+                    } font-extrabold transition duration-500 hover:shadow-md`}
                   >
                     {e.title}
                   </Link>
@@ -167,7 +167,7 @@ export default function Nav() {
                 onMouseDown={() => setItem(5)}
                 className={`py-1 text-xl ${
                   5 == item ? `text-blue-600` : `text-red-500`
-                } font-extrabold text-border transition duration-500 hover:shadow-md`}
+                } font-extrabold transition duration-500 hover:shadow-md`}
               >
                 Book Now
               </Link>
