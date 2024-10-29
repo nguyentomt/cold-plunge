@@ -14,7 +14,7 @@ export default function Nav() {
   const navItems = [
     {
       title: "home",
-      href: "/experience",
+      href: "/",
       //   options: [
       //     {
       //       name: "Slam Dunk",
