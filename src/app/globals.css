@@ -133,3 +133,9 @@ blurry {
   transform: translateY(-10px);
   pointer-events: none;
 }
+
+@media only screen and (max-width: 768px) {
+  #contrast {
+    scroll-margin-top: 2rem;
+   }
+  }
