@@ -2,8 +2,7 @@ import Image from "next/image";
 import { auth } from "../../auth";
 // import { getServerSession } from "next-auth";
 import Link from "next/link";
-// import { SignIn } from "@/components/sign-in";
-import Document from "next/document";
+// import { SignIn } from "@/components/sign-in";\
 import Banner from "@/components/banner";
 
 export default async function Home() {
