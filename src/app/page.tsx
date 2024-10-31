@@ -14,9 +14,9 @@ export default async function Home() {
           Meta labs is a communal space built for members to train, learn and
           share their experiences of basic hot and cold practices and their
           respective effects on the human body. We believe this knowledge is
-          mankind's collective responsibility to behold, and insodoing, we could together
+          mankind&apos;s collective responsibility to behold, and insodoing, we could together
           better support the health of our communities all the while supporting
-          our government to curb today's fast growing mental crisis. We welcome
+          our government to curb today&apos;s fast growing mental crisis. We welcome
           you to join our family of wellness enthusiasts on our journey of work,
           knowledge, and better mental awareness today.
           <p className="mt-4 mb-2 z-20">
