@@ -16,6 +16,10 @@
   }
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   display: relative;
@@ -101,4 +105,31 @@ blurry {
 
 .book-shadow {
   text-shadow: 4px 2px 0 #00c8d6;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float {
+  animation: float 2s ease-in-out infinite;
+}
+
+#floater {
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#floater.fade-out {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
 }

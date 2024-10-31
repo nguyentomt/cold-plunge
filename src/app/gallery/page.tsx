@@ -38,7 +38,7 @@ const Gallery = () => {
   return (
     <div className="flex flex-col w-screen items-center justify-center gap-0 overscroll-x-auto lg:pt-28 z-50">
       <article
-        className="w-screen h-screen md:w-3/4 pt-[5.5rem] md:pt-0 md:h-full flex flex-col items-center"
+        className="w-screen h-screen lg:w-3/4 pt-[6.5rem] lg:pt-0 lg:h-full flex flex-col items-center"
         style={{  aspectRatio: "3 / 2" }}
       >
         {/* <button
