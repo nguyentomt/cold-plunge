@@ -3,8 +3,10 @@ import { Mulish } from "next/font/google";
 import "./globals.css";
 // import Provider from "./providers";
 import { Analytics } from "@vercel/analytics/react";
-import NavWrapper from "@/components/nav-wrapper";
+// import NavWrapper from "@/components/nav-wrapper";
 import Nav from "@/components/nav";
+// import BubblesContainer from "@/components/bubbleContainer";
+
 
 const mulish = Mulish({ weight: ["600", "700"], subsets: ["latin"] });
 
@@ -21,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={mulish.className}>
+        {/* <BubblesContainer /> */}
         {/* <Provider> */}
           {/* <NavWrapper /> */}
           <Nav />

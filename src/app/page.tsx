@@ -4,6 +4,7 @@ import { auth } from "../../auth";
 import Link from "next/link";
 // import { SignIn } from "@/components/sign-in";\
 import Banner from "@/components/banner";
+import { EmblaCarousel } from "@/components/carousel";
 
 export default async function Home() {
 
@@ -31,7 +32,8 @@ export default async function Home() {
         <Banner />
 
         <div className="pb-8 bg-gray-100 rounded-xl mt-[20%]">
-          <h2 id="contrast" className="p-4">
+          <EmblaCarousel />
+          {/* <h2 id="contrast" className="p-4">
             # Contrast Therapy
           </h2>
 
@@ -62,7 +64,7 @@ export default async function Home() {
                 className=""
               />
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* <h2 id="wim-hof" className="w-screen h-screen pl-4">
