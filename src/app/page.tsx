@@ -47,9 +47,63 @@ export default async function Home() {
     )
   }
 
+  const ColdWaterImmersion = () => {
+    return (
+        <div className="pb-8 bg-gray-100 rounded-xl">
+          <h2 id="cwi" className="p-4">
+            # Cold Water Immersion
+          </h2>
+
+          <div className="flex flex-col-reverse lg:flex-row gap-4">
+            <div className="lg:w-1/2 flex justify-center">
+              <div className="w-full px-4 lg:pl-24 text-lg pb-8 text-justify">
+                <a
+                  href="https://longevity.stanford.edu/lifestyle/2024/05/22/jumping-into-the-ice-bath-trend-mental-health-benefits-of-cold-water-immersion/"
+                  target="_new"
+                  className="underline"
+                >
+                  Stanford Center on Longevity: Lifestyle Medicine (2024)
+                </a>
+                : This article is a compilation of research on the benefits of Cold Water Immersion. These studies show that cold water immersion may improve mental health by increasing endorphin and norepinephrine levels, and may also improve resilience to stress by decreasing cortisol levels.
+
+                <p className="py-4">"Emerging studies now suggest that plunging into cold water (roughly 10-15°C, 50-60°F) can improve mood, decrease stress, and potentially slow the progression of neurodegenerative diseases."</p>
+
+              </div>
+            </div>
+
+            <div className="bg-black lg:bg-transparent flex w-full lg:w-1/2 justify-center items-center">
+              <Image
+                src="https://longevity.stanford.edu/lifestyle/wp-content/uploads/sites/31/2024/05/Blog-Photos.png"
+                width="469"
+                height="369"
+                alt="Contrast Therapy"
+                className=""
+              />
+            </div>
+          </div>
+        </div>
+    )
+  }
+
   const slides = [ 
     <ContrastTherapy />,
+    <ColdWaterImmersion />
   ]
+
+  const Resources = () => {
+    return (
+      <div className="pb-2 bg-gray-100 rounded-xl mt-[20%]">
+        <Carousel loop>
+          {slides.map((slide, i) => {
+            return (
+              <div className="relative flex-[0_0_100%] embla__slide" key={i}>
+                {slide}
+              </div>
+              )
+            })}
+        </Carousel>
+      </div>
+  )}
 
   return (
     <section className="flex flex-col gap-4 items-center py-28 lg:pt-32 overflow-clip z-40">
@@ -74,53 +128,8 @@ export default async function Home() {
       <article className="flex flex-col items-center pt-12 lg:py-24 text-gray-800 w-screen lg:w-4/5 overflow-clip">
         <Banner />
 
-        <div className="pb-2 bg-gray-100 rounded-xl mt-[20%]">
-          <Carousel loop>
-            {slides.map((slide, i) => {
-              return (
-                <div className="relative flex-0_0_100%] embla__slide" key={i}>
-                  {slide}
-                </div>
-              )
-            })}
-          </Carousel>
-          {/* <h2 id="contrast" className="p-4">
-            # Contrast Therapy
-          </h2>
+        <Resources />
 
-          <div className="flex flex-col-reverse lg:flex-row gap-4">
-            <div className="lg:w-1/2 flex justify-center">
-              <p className="w-full px-4 lg:pl-24 text-lg pb-8 text-justify">
-                <a
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6188085/"
-                  target="_new"
-                  className="underline"
-                >
-                  Journal of Athletic Training (2018)
-                </a>
-                : This study found that using contrast baths (CB) temporarily
-                changed blood flow and oxygen levels in the calf muscles of
-                healthy people. These changes might explain why CB can help with
-                muscle injury recovery by improving blood circulation and oxygen
-                delivery to the tissues.
-              </p>
-            </div>
-
-            <div className="bg-black lg:bg-transparent flex w-full lg:w-1/2 justify-center items-center">
-              <Image
-                src="/contrast.jpg"
-                width="360"
-                height="360"
-                alt="Contrast Therapy"
-                className=""
-              />
-            </div>
-          </div> */}
-        </div>
-
-        {/* <h2 id="wim-hof" className="w-screen h-screen pl-4">
-            Wim Hof Method
-            </h2> */}
       </article>
 
       <Link
