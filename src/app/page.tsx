@@ -4,9 +4,52 @@ import { auth } from "../../auth";
 import Link from "next/link";
 // import { SignIn } from "@/components/sign-in";\
 import Banner from "@/components/banner";
-import { EmblaCarousel } from "@/components/carousel";
+import Carousel from "@/components/carousel";
 
 export default async function Home() {
+
+  const ContrastTherapy = () => {
+    return (
+        <div className="pb-8 bg-gray-100 rounded-xl">
+          <h2 id="contrast" className="p-4">
+            # Contrast Therapy
+          </h2>
+
+          <div className="flex flex-col-reverse lg:flex-row gap-4">
+            <div className="lg:w-1/2 flex justify-center">
+              <p className="w-full px-4 lg:pl-24 text-lg pb-8 text-justify">
+                <a
+                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6188085/"
+                  target="_new"
+                  className="underline"
+                >
+                  Journal of Athletic Training (2018)
+                </a>
+                : This study found that using contrast baths (CB) temporarily
+                changed blood flow and oxygen levels in the calf muscles of
+                healthy people. These changes might explain why CB can help with
+                muscle injury recovery by improving blood circulation and oxygen
+                delivery to the tissues.
+              </p>
+            </div>
+
+            <div className="bg-black lg:bg-transparent flex w-full lg:w-1/2 justify-center items-center">
+              <Image
+                src="/contrast.jpg"
+                width="360"
+                height="360"
+                alt="Contrast Therapy"
+                className=""
+              />
+            </div>
+          </div>
+        </div>
+    )
+  }
+
+  const slides = [ 
+    <ContrastTherapy />,
+  ]
 
   return (
     <section className="flex flex-col gap-4 items-center py-28 lg:pt-32 overflow-clip z-40">
@@ -31,8 +74,16 @@ export default async function Home() {
       <article className="flex flex-col items-center pt-12 lg:py-24 text-gray-800 w-screen lg:w-4/5 overflow-clip">
         <Banner />
 
-        <div className="pb-8 bg-gray-100 rounded-xl mt-[20%]">
-          <EmblaCarousel />
+        <div className="pb-2 bg-gray-100 rounded-xl mt-[20%]">
+          <Carousel loop>
+            {slides.map((slide, i) => {
+              return (
+                <div className="relative flex-0_0_100%] embla__slide" key={i}>
+                  {slide}
+                </div>
+              )
+            })}
+          </Carousel>
           {/* <h2 id="contrast" className="p-4">
             # Contrast Therapy
           </h2>
