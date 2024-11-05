@@ -66,7 +66,7 @@ export default async function Home() {
                 </a>
                 : This article is a compilation of research on the benefits of Cold Water Immersion. These studies show that cold water immersion may improve mental health by increasing endorphin and norepinephrine levels, and may also improve resilience to stress by decreasing cortisol levels.
 
-                <p className="py-4">"Emerging studies now suggest that plunging into cold water (roughly 10-15°C, 50-60°F) can improve mood, decrease stress, and potentially slow the progression of neurodegenerative diseases."</p>
+                <p className="py-4">&quot;Emerging studies now suggest that plunging into cold water (roughly 10-15°C, 50-60°F) can improve mood, decrease stress, and potentially slow the progression of neurodegenerative diseases.&quot;</p>
 
               </div>
             </div>
@@ -85,19 +85,19 @@ export default async function Home() {
     )
   }
 
-  const slides = [ 
-    <ContrastTherapy />,
-    <ColdWaterImmersion />
-  ]
+  const slides = [
+    { id: "contrast-therapy", component: <ContrastTherapy /> },
+    { id: "cold-water-immersion", component: <ColdWaterImmersion /> },
+  ];
 
   const Resources = () => {
     return (
       <div className="pb-2 bg-gray-100 rounded-xl mt-[20%]">
         <Carousel loop>
-          {slides.map((slide, i) => {
+          {slides.map((slide) => {
             return (
-              <div className="relative flex-[0_0_100%] embla__slide" key={i}>
-                {slide}
+              <div className="relative flex-[0_0_100%] embla__slide" key={slide.id}>
+                {slide.component}
               </div>
               )
             })}
@@ -127,9 +127,7 @@ export default async function Home() {
 
       <article className="flex flex-col items-center pt-12 lg:py-24 text-gray-800 w-screen lg:w-4/5 overflow-clip">
         <Banner />
-
         <Resources />
-
       </article>
 
       <Link
