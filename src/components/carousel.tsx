@@ -43,6 +43,7 @@ const Carousel = ({ children, ...options }: Props) => {
                     onNext={() => emblaApi?.scrollNext()}
                     onPrev={() => emblaApi?.scrollPrev()}
                 />
+                
                 <Dots itemsLength={length} selectedIndex={selectedIndex} />
             </div>
   )

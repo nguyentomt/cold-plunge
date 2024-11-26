@@ -11,7 +11,7 @@ export default async function Home() {
   const ContrastTherapy = () => {
     return (
         <div className="pb-8 bg-gray-100 rounded-xl">
-          <h2 id="contrast" className="p-4">
+          <h2 id="contrast" className="p-4 text-center lg:text-left">
             # Contrast Therapy
           </h2>
 
@@ -50,7 +50,7 @@ export default async function Home() {
   const ColdWaterImmersion = () => {
     return (
         <div className="pb-8 bg-gray-100 rounded-xl">
-          <h2 id="cwi" className="p-4">
+          <h2 id="cwi" className="p-4 text-center lg:text-left">
             # Cold Water Immersion
           </h2>
 
