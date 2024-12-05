@@ -35,14 +35,17 @@ const Carousel = ({ children, ...options }: Props) => {
   
 
   return (
-            <div className="embla" ref={emblaRef}>
+            <div className="relative embla" ref={emblaRef}>
                 <div className="flex embla__container">{children}</div>
-                <CarouselControls
-                    canScrollNext={canScrollNext}
-                    canScrollPrev={canScrollPrev}
-                    onNext={() => emblaApi?.scrollNext()}
-                    onPrev={() => emblaApi?.scrollPrev()}
-                />
+                <div className="absolute w-full top-1/2">
+                    <CarouselControls
+                        canScrollNext={canScrollNext}
+                        canScrollPrev={canScrollPrev}
+                        onNext={() => emblaApi?.scrollNext()}
+                        onPrev={() => emblaApi?.scrollPrev()}
+                    />
+                </div>
+                
                 
                 <Dots itemsLength={length} selectedIndex={selectedIndex} />
             </div>

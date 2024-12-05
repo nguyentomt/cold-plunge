@@ -6,6 +6,7 @@ import Link from "next/link";
 import Banner from "@/components/banner";
 import Carousel from "@/components/carousel";
 
+
 export default async function Home() {
 
   const ContrastTherapy = () => {
@@ -85,14 +86,131 @@ export default async function Home() {
     )
   }
 
+  const Pg1 = () => {
+    return (
+      <article className="w-full flex justify-center">
+        <Image src="/whitepaper/wp01.png" width="669" height="669" alt="White Paper page 1" />
+      </article>
+    )
+  }
+
+  const Pg2 = () => {
+    return (
+      <article className="w-full flex justify-center">
+        <Image src="/whitepaper/wp02.png" width="669" height="669" alt="White Paper page 2" />
+      </article>
+    )
+  }
+
+  const Pg3 = () => {
+    return (
+      <article className="w-full flex justify-center">
+        <Image src="/whitepaper/wp03.png" width="669" height="420" alt="White Paper page 3" />
+      </article>
+    )
+  }
+
+  const Pg4 = () => {
+    return (
+      <article className="w-full flex justify-center">
+        <Image src="/whitepaper/wp04.png" width="669" height="420" alt="White Paper page 4" />
+      </article>
+    )
+  }
+
+  const Pg5 = () => {
+    return (
+      <article className="w-full flex justify-center">
+        <Image src="/whitepaper/wp05.png" width="669" height="420" alt="White Paper page 5" />
+      </article>
+    )
+  }
+
+  const Pg6 = () => {
+    return (
+      <article className="w-full flex justify-center">
+        <Image src="/whitepaper/wp06.png" width="669" height="420" alt="White Paper page 6" />
+      </article>
+    )
+  }
+
+  const Pg7 = () => {
+    return (
+      <article className="w-full flex justify-center">
+        <Image src="/whitepaper/wp07.png" width="669" height="420" alt="White Paper page 7" />
+      </article>
+    )
+  }
+
+  const Pg8 = () => {
+    return (
+      <article className="w-full flex justify-center">
+        <Image src="/whitepaper/wp08.png" width="669" height="420" alt="White Paper page 8" />
+      </article>
+    )
+  }
+
+  const Pg9 = () => {
+    return (
+      <article className="w-full flex justify-center">
+        <Image src="/whitepaper/wp09.png" width="669" height="420" alt="White Paper page 9" />
+      </article>
+    )
+  }
+
+  const Pg10 = () => {
+    return (
+      <article className="w-full flex justify-center">
+        <Image src="/whitepaper/wp10.png" width="669" height="420" alt="White Paper page 10" />
+      </article>
+    )
+  }
+
+  const Pg11 = () => {
+    return (
+      <article className="flex justify-center">
+        <Image src="/whitepaper/wp11.png" width="669" height="420" alt="White Paper page 11" />
+      </article>
+    )
+  }
+
+  const Pg12 = () => {
+    return (
+      <article className="flex justify-center">
+        <Image src="/whitepaper/wp12.png" width="669" height="420" alt="White Paper page 12" />
+      </article>
+    )
+  }
+
+  const Pg13 = () => {
+    return (
+      <article className="flex justify-center">
+        <Image src="/whitepaper/wp13.png" width="669" height="420" alt="White Paper page 13" />
+      </article>
+    )
+  }
+
   const slides = [
-    { id: "contrast-therapy", component: <ContrastTherapy /> },
-    { id: "cold-water-immersion", component: <ColdWaterImmersion /> },
+    { id: "white-paper-01", component: <Pg1 /> },
+    { id: "white-paper-02", component: <Pg2 /> },
+    { id: "white-paper-03", component: <Pg3 /> },
+    { id: "white-paper-04", component: <Pg4 /> },
+    { id: "white-paper-05", component: <Pg5 /> },
+    { id: "white-paper-06", component: <Pg6 /> },
+    { id: "white-paper-07", component: <Pg7 /> },
+    { id: "white-paper-08", component: <Pg8 /> },
+    { id: "white-paper-09", component: <Pg9 /> },
+    { id: "white-paper-10", component: <Pg10 /> },
+    { id: "white-paper-11", component: <Pg11 /> },
+    { id: "white-paper-12", component: <Pg12 /> },
+    { id: "white-paper-13", component: <Pg13 /> },
+    // { id: "contrast-therapy", component: <ContrastTherapy /> },
+    // { id: "cold-water-immersion", component: <ColdWaterImmersion /> },
   ];
 
   const Resources = () => {
     return (
-      <div className="pb-2 bg-gray-100 rounded-xl mt-[20%]">
+      <div id="resources" className="pb-2 max-w-[50rem] rounded-xl mt-[20%] lg:mt-[15%]">
         <Carousel loop>
           {slides.map((slide) => {
             return (
@@ -106,7 +224,7 @@ export default async function Home() {
   )}
 
   return (
-    <section className="flex flex-col gap-4 items-center py-28 lg:pt-32 overflow-clip z-40">
+    <section className="flex flex-col gap-4 items-center pt-28 lg:pt-32 overflow-clip z-40">
       <div className="w-4/5 lg:w-1/3">
         <div className="w-full bg-gray-100 lg:text-xl p-4 rounded-3xl text-gray-800 text-justify">
           Meta labs is a communal space built for members to train, learn and
