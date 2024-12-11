@@ -22,7 +22,7 @@ const Gallery = () => {
 
   const pictures = [
     // { src: "/1.jpg", title: "Lounge", description: "Description 1" },
-    { src: "/8.jpg" },
+    { src: "/8.jpg", title: "Baths", description: "Our 37° and 44° baths, with sauna, shower, and changing rooms in background" },
     { src: "/9.jpg" },
     { src: "/10.jpg" },
     { src: "/11.jpg" },
@@ -48,7 +48,7 @@ const Gallery = () => {
           Theater Mode
         </button> */}
 
-        <Lightbox plugins={[Inline, Thumbnails, Captions]} slides={pictures} />
+        <Lightbox plugins={[Inline, Thumbnails, Fullscreen, Counter, Share, Zoom, Captions]} slides={pictures} />
       </article>
       {/* <Lightbox
         plugins={[

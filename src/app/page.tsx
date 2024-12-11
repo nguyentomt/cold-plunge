@@ -86,136 +86,37 @@ export default async function Home() {
     )
   }
 
-  const Pg1 = () => {
-    return (
-      <article className="w-full flex justify-center">
-        <Image src="/whitepaper/wp01.png" width="669" height="669" alt="White Paper page 1" />
-      </article>
-    )
-  }
-
-  const Pg2 = () => {
-    return (
-      <article className="w-full flex justify-center">
-        <Image src="/whitepaper/wp02.png" width="669" height="669" alt="White Paper page 2" />
-      </article>
-    )
-  }
-
-  const Pg3 = () => {
-    return (
-      <article className="w-full flex justify-center">
-        <Image src="/whitepaper/wp03.png" width="669" height="420" alt="White Paper page 3" />
-      </article>
-    )
-  }
-
-  const Pg4 = () => {
-    return (
-      <article className="w-full flex justify-center">
-        <Image src="/whitepaper/wp04.png" width="669" height="420" alt="White Paper page 4" />
-      </article>
-    )
-  }
-
-  const Pg5 = () => {
-    return (
-      <article className="w-full flex justify-center">
-        <Image src="/whitepaper/wp05.png" width="669" height="420" alt="White Paper page 5" />
-      </article>
-    )
-  }
-
-  const Pg6 = () => {
-    return (
-      <article className="w-full flex justify-center">
-        <Image src="/whitepaper/wp06.png" width="669" height="420" alt="White Paper page 6" />
-      </article>
-    )
-  }
-
-  const Pg7 = () => {
-    return (
-      <article className="w-full flex justify-center">
-        <Image src="/whitepaper/wp07.png" width="669" height="420" alt="White Paper page 7" />
-      </article>
-    )
-  }
-
-  const Pg8 = () => {
-    return (
-      <article className="w-full flex justify-center">
-        <Image src="/whitepaper/wp08.png" width="669" height="420" alt="White Paper page 8" />
-      </article>
-    )
-  }
-
-  const Pg9 = () => {
-    return (
-      <article className="w-full flex justify-center">
-        <Image src="/whitepaper/wp09.png" width="669" height="420" alt="White Paper page 9" />
-      </article>
-    )
-  }
-
-  const Pg10 = () => {
-    return (
-      <article className="w-full flex justify-center">
-        <Image src="/whitepaper/wp10.png" width="669" height="420" alt="White Paper page 10" />
-      </article>
-    )
-  }
-
-  const Pg11 = () => {
-    return (
-      <article className="flex justify-center">
-        <Image src="/whitepaper/wp11.png" width="669" height="420" alt="White Paper page 11" />
-      </article>
-    )
-  }
-
-  const Pg12 = () => {
-    return (
-      <article className="flex justify-center">
-        <Image src="/whitepaper/wp12.png" width="669" height="420" alt="White Paper page 12" />
-      </article>
-    )
-  }
-
-  const Pg13 = () => {
-    return (
-      <article className="flex justify-center">
-        <Image src="/whitepaper/wp13.png" width="669" height="420" alt="White Paper page 13" />
-      </article>
-    )
-  }
 
   const slides = [
-    { id: "white-paper-01", component: <Pg1 /> },
-    { id: "white-paper-02", component: <Pg2 /> },
-    { id: "white-paper-03", component: <Pg3 /> },
-    { id: "white-paper-04", component: <Pg4 /> },
-    { id: "white-paper-05", component: <Pg5 /> },
-    { id: "white-paper-06", component: <Pg6 /> },
-    { id: "white-paper-07", component: <Pg7 /> },
-    { id: "white-paper-08", component: <Pg8 /> },
-    { id: "white-paper-09", component: <Pg9 /> },
-    { id: "white-paper-10", component: <Pg10 /> },
-    { id: "white-paper-11", component: <Pg11 /> },
-    { id: "white-paper-12", component: <Pg12 /> },
-    { id: "white-paper-13", component: <Pg13 /> },
+    { id: "white-paper-01" },
+    { id: "white-paper-02" },
+    { id: "white-paper-03" },
+    { id: "white-paper-04" },
+    { id: "white-paper-05" },
+    { id: "white-paper-06" },
+    { id: "white-paper-07" },
+    { id: "white-paper-08" },
+    { id: "white-paper-09" },
+    { id: "white-paper-10" },
+    { id: "white-paper-11" },
+    { id: "white-paper-12" },
+    { id: "white-paper-13" },
     // { id: "contrast-therapy", component: <ContrastTherapy /> },
     // { id: "cold-water-immersion", component: <ColdWaterImmersion /> },
   ];
 
-  const Resources = () => {
+  const WhitePaper = () => {
     return (
       <div id="resources" className="pb-2 max-w-[50rem] rounded-xl mt-[20%] lg:mt-[15%]">
         <Carousel loop>
-          {slides.map((slide) => {
+          {slides.map((slide, index) => {
             return (
               <div className="relative flex-[0_0_100%] embla__slide" key={slide.id}>
-                {slide.component}
+                <article className="flex h-screen justify-center " 
+                // style={{ backgroundImage: `url('/whitepaper/wp${index+1}')`, backgroundSize: 'cover' }}
+                >
+                  <Image src={`/whitepaper/wp${index+1}.png`} width="669" height="420" alt={`White Paper page ${index + 1}`} />
+                </article>
               </div>
               )
             })}
@@ -245,7 +146,7 @@ export default async function Home() {
 
       <article className="flex flex-col items-center pt-12 lg:py-24 text-gray-800 w-screen lg:w-4/5 overflow-clip">
         <Banner />
-        <Resources />
+        <WhitePaper />
       </article>
 
       <Link
