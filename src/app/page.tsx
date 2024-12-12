@@ -112,7 +112,7 @@ export default async function Home() {
           {slides.map((slide, index) => {
             return (
               <div className="relative flex-[0_0_100%] embla__slide" key={slide.id}>
-                <article className="flex h-screen justify-center " 
+                <article className="flex justify-center " 
                 // style={{ backgroundImage: `url('/whitepaper/wp${index+1}')`, backgroundSize: 'cover' }}
                 >
                   <Image src={`/whitepaper/wp${index+1}.png`} width="669" height="420" alt={`White Paper page ${index + 1}`} />
