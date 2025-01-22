@@ -5,6 +5,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 // import NavWrapper from "@/components/nav-wrapper";
 import Nav from "@/components/nav";
+import Footer from "@/components/footer";
 // import BubblesContainer from "@/components/bubbleContainer";
 
 
@@ -28,6 +29,7 @@ export default function RootLayout({
           {/* <NavWrapper /> */}
           <Nav />
           {children}
+          <Footer />
           <Analytics />
         {/* </Provider> */}
         </body>
