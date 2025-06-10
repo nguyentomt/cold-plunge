@@ -1,14 +1,17 @@
 "use client";
 import { Button, Popover, Typography } from "@mui/material";
 import WalletIcon from "@mui/icons-material/Wallet";
-import { useState } from "react";
-import { useSDK } from "@metamask/sdk-react";
+import { ethers } from "ethers";
 import { formatAddress } from "../lib/utils";
+import { useState, useEffect } from "react";
 
 export const ConnectWalletButton = () => {
-  const { sdk, connected, connecting, account } = useSDK();
-
+  const [account, setAccount] = useState<string | null>(null);
+  const [connecting, setConnecting] = useState(false);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  
+
+  
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -20,23 +23,54 @@ export const ConnectWalletButton = () => {
 
   const connect = async () => {
     try {
-      await sdk?.connect();
+    setConnecting(true);
+
+    if (!window.ethereum) {
+      throw new Error("No wallet found. Please install MetaMask.");
+    }
+
+    let provider: any;
+
+    // If multiple wallets are injected, select MetaMask
+    if (Array.isArray(window.ethereum.providers)) {
+      provider = window.ethereum.providers.find((p: any) => p.isMetaMask);
+    } else if (window.ethereum.isMetaMask) {
+      provider = window.ethereum;
+    } else {
+      throw new Error("MetaMask not found. Please install MetaMask.");
+    }
+
+    const ethersProvider = new ethers.BrowserProvider(provider);
+    const accounts = await ethersProvider.send("eth_requestAccounts", []);
+    setAccount(accounts[0]);
     } catch (err) {
-      console.warn(`No accounts found`, err);
+      console.warn("Connection failed:", err);
+    } finally {
+      setConnecting(false);
     }
   };
 
   const disconnect = () => {
-    sdk?.terminate();
+    setAccount(null);
     handleClose();
   };
 
   const open = Boolean(anchorEl);
   const id = open ? "wallet-popover" : undefined;
 
+  useEffect(() => {
+    const checkConnected = async () => {
+      if (!window.ethereum) return;
+      const provider = new ethers.BrowserProvider(window.ethereum);
+      const accounts = await provider.send("eth_accounts", []);
+      if (accounts.length > 0) setAccount(accounts[0]);
+    };
+    checkConnected();
+  }, []);
+
   return (
     <div>
-      {connected ? (
+      {account ? (
         <>
           <Button
             aria-describedby={id}

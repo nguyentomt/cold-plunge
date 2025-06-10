@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { MetaMaskProvider } from "@metamask/sdk-react";
+
 import { ConnectWalletButton } from "./MetamaskButton";
 
 export default function Nav() {
@@ -106,9 +106,7 @@ export default function Nav() {
               );
             })}
             <div className="flex gap-4 px-6">
-              <MetaMaskProvider debug={false} sdkOptions={sdkOptions}>
                 <ConnectWalletButton />
-              </MetaMaskProvider>
             </div>
           </div>
 
@@ -193,9 +191,7 @@ export default function Nav() {
             </div>
 
             <div className="flex gap-4 px-6">
-              <MetaMaskProvider debug={false} sdkOptions={sdkOptions}>
                 <ConnectWalletButton />
-              </MetaMaskProvider>
             </div>
           </div>
 

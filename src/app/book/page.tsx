@@ -1,7 +1,6 @@
 'use client'
 import Image from "next/image";
 import PaymentButton from "@/components/PaymentButton";
-import { MetaMaskProvider } from "@metamask/sdk-react";
 import { ConnectWalletButton } from "@/components/MetamaskButton";
 
 const Booking = () => {
@@ -24,9 +23,7 @@ const Booking = () => {
             <iframe src="https://booking.mangomint.com/metalabscoldplungesauna" title="Cold plunge booking form by Mango Mint" className="w-[90%] h-[669px] lg:w-[469px] iframe"></iframe>
 
             <div className="flex gap-4 px-6 my-12">
-              <MetaMaskProvider debug={false} sdkOptions={sdkOptions}>
                 <ConnectWalletButton />
-              </MetaMaskProvider>
             </div>
             
             {/* <div className="py-12">
