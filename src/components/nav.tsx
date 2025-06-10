@@ -105,9 +105,6 @@ export default function Nav() {
                 </div>
               );
             })}
-            <div className="flex gap-4 px-6">
-                <ConnectWalletButton />
-            </div>
           </div>
 
           {/* <button onClick={toggleMobileMenu} className="focus:outline-none">
