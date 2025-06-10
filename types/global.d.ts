@@ -5,3 +5,8 @@ declare global {
     ethereum?: any; // MetaMask injects this object
   }
 }
+
+declare module "*.json" {
+  const value: any;
+  export default value;
+}

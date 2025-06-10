@@ -1,5 +1,6 @@
 import { ethers } from "ethers";
 import * as dotenv from "dotenv";
+import { InterfaceAbi } from "ethers";
 
 dotenv.config();
 
@@ -28,7 +29,7 @@ async function main() {
     console.log("Deploying contracts with the account:", wallet.address);
 
     // Get contract bytecode and ABI
-    const contractABI = [/* Add contract ABI here */];
+    const contractABI: InterfaceAbi = [/* Add contract ABI here */];
     const contractBytecode = ""; // Add contract bytecode here
 
     // Deploy contract
