@@ -1,6 +1,10 @@
-
+'use client'
+import { Map } from "@/components/map";
+import { useState } from "react";
 
 const Location = () => {
+  const [map, setMap] = useState<google.maps.Map | null>(null);
+
     return (
       <article className="flex flex-col gap-4 items-center text-lg w-full pt-24 lg:pt-28 text-border">
         <iframe
@@ -9,6 +13,8 @@ const Location = () => {
           style={{ border: 0 }}
           loading="lazy"
         ></iframe>
+
+        {/* <Map setMap={setMap} /> */}
         <div className="flex gap-8 justify-center p-4"><a href="tel:7146586379">📞  714 658 6379</a>
         <p>⌛ 9am-7pm</p></div>
 

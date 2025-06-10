@@ -2,12 +2,24 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-
+import { MetaMaskProvider } from "@metamask/sdk-react";
+import { ConnectWalletButton } from "./MetamaskButton";
 
 export default function Nav() {
   const [isOpen, setOpen] = useState(false);
   const [item, setItem] = useState(0);
-  
+
+  const host =
+    typeof window !== "undefined" ? window.location.host : "defaultHost";
+
+  const sdkOptions = {
+    logging: { developerMode: false },
+    checkInstallationImmediately: false,
+    dappMetadata: {
+      name: "Next-Metamask-Boilerplate",
+      url: host, // using the host constant defined above
+    },
+  };
 
   const toggleMobileMenu = () => {
     setOpen(!isOpen);
@@ -93,6 +105,11 @@ export default function Nav() {
                 </div>
               );
             })}
+            <div className="flex gap-4 px-6">
+              <MetaMaskProvider debug={false} sdkOptions={sdkOptions}>
+                <ConnectWalletButton />
+              </MetaMaskProvider>
+            </div>
           </div>
 
           {/* <button onClick={toggleMobileMenu} className="focus:outline-none">
@@ -173,6 +190,12 @@ export default function Nav() {
               >
                 Book Now
               </Link>
+            </div>
+
+            <div className="flex gap-4 px-6">
+              <MetaMaskProvider debug={false} sdkOptions={sdkOptions}>
+                <ConnectWalletButton />
+              </MetaMaskProvider>
             </div>
           </div>
 
