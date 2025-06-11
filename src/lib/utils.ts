@@ -7,7 +7,7 @@ export function cn(...inputs: ClassValue[]) {
 
 export const formatAddress = (address?: string): string => {
   if (!address) return "";
-  return `${address.slice(0, 6)}...${address.slice(-4)}`;
+  return `${address.slice(0, 8)}...`;
 }
 
 export const formatBalance = (rawBalance: string) => {

@@ -2,7 +2,7 @@ const Footer = () => {
 
     return (
         <section id="footer" className="w-full flex justify-center">
-            <div className="w-full md:w-3/5 flex gap-6 pl-24 bg-slate-800 bg-opacity-50 md:pl-0 flex-col blurry md:flex-row justify-center align-center md:justify-around py-8">
+            <div className="w-full md:w-3/5 flex gap-6 pl-24 text-slate-200 bg-slate-800 bg-opacity-50 md:pl-0 flex-col blurry md:flex-row justify-center align-center md:justify-around py-8">
 
                 <article className="flex-col">
                     <p className="pb-4 text-xl">Meta Labs</p>

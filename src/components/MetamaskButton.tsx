@@ -76,6 +76,7 @@ export const ConnectWalletButton = () => {
             aria-describedby={id}
             variant="contained"
             onClick={handleClick}
+            sx={{ backgroundColor: '#403e3e'}}
           >
             {formatAddress(account)}
           </Button>
