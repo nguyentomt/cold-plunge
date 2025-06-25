@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
+import { WalletProvider } from "@/lib/WalletContext";
 // import BubblesContainer from "@/components/bubbleContainer";
 
 const mulish = Mulish({ weight: ["600", "700"], subsets: ["latin"] });
@@ -26,6 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={mulish.className}>
         <AppRouterCacheProvider>
+          <WalletProvider>
           {/* <BubblesContainer /> */}
           {/* <Provider> */}
           {/* <NavWrapper /> */}
@@ -34,6 +36,7 @@ export default function RootLayout({
           <Footer />
           <Analytics />
           {/* </Provider> */}
+          </WalletProvider>
         </AppRouterCacheProvider>
       </body>
     </html>

@@ -5,9 +5,10 @@ import Link from "next/link";
 // import { SignIn } from "@/components/sign-in";\
 import Banner from "@/components/banner";
 import Carousel from "@/components/carousel";
-
+import ConditionalDashboard from "@/components/dashboard";
 
 export default async function Home() {
+  
 
   const ContrastTherapy = () => {
     return (
@@ -124,8 +125,11 @@ export default async function Home() {
       </div>
   )}
 
+  
+
   return (
     <section className="flex flex-col gap-4 items-center pt-28 lg:pt-32 overflow-clip z-40">
+      <ConditionalDashboard />
       <div className="w-4/5 lg:w-1/3">
         <div className="w-full bg-gray-100 lg:text-xl p-4 rounded-3xl text-gray-800 text-justify">
           Meta labs is a communal space built for members to train, learn and

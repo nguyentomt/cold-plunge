@@ -4,9 +4,10 @@ import WalletIcon from "@mui/icons-material/Wallet";
 import { ethers } from "ethers";
 import { formatAddress } from "../lib/utils";
 import { useState, useEffect } from "react";
+import { useWallet } from "@/lib/WalletContext";
 
 export const ConnectWalletButton = () => {
-  const [account, setAccount] = useState<string | null>(null);
+  const { account, setAccount } = useWallet();
   const [connecting, setConnecting] = useState(false);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   
@@ -66,7 +67,7 @@ export const ConnectWalletButton = () => {
       if (accounts.length > 0) setAccount(accounts[0]);
     };
     checkConnected();
-  }, []);
+  }, [setAccount]);
 
   return (
     <div>
