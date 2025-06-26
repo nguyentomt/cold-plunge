@@ -10,11 +10,24 @@ import {
   Tooltip,
   ResponsiveContainer,
   Scatter,
-  ScatterChart,
 } from "recharts";
 
 type Props = {
   data: { date: string; visits: number }[];
+};
+
+const CustomTooltip = ({ active, payload, label }: any) => {
+  if (active && payload && payload.length > 0) {
+    const { visits } = payload[0].payload;
+    return (
+      <div className="bg-white p-2 rounded shadow text-sm border border-gray-200">
+        <p className="text-gray-700 font-semibold">Date visited: {label}</p>
+        <p className="text-gray-600">Visits: {visits}</p>
+      </div>
+    );
+  }
+
+  return null;
 };
 
 export default function ColdPlungeChart({ data }: Props) {
@@ -42,7 +55,7 @@ export default function ColdPlungeChart({ data }: Props) {
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="date" />
         <YAxis domain={[0, 3]} ticks={[0, 1, 2]} />
-        <Tooltip />
+        <Tooltip content={<CustomTooltip />} />
 
         {/* Smooth curve */}
         <Area
@@ -51,6 +64,7 @@ export default function ColdPlungeChart({ data }: Props) {
           fill="url(#areaGradient)"
           fillOpacity={1}
           dot={{ fill: "#ff5722", r: 5 }}
+          tooltipType="none"
         />
         <Line
           type="monotone"
@@ -58,6 +72,7 @@ export default function ColdPlungeChart({ data }: Props) {
           stroke="url(#lineGradient)"
           strokeWidth={2}
           dot={false}
+          tooltipType="none"
         />
         
 
