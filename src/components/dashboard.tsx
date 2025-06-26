@@ -23,15 +23,26 @@ export default function ConditionalDashboard() {
     }
   }, [account]);
 
-  const userVisitData = [
-    { date: "2024-06-01", visits: 1 },
-    { date: "2024-06-02", visits: 0 },
-    { date: "2024-06-03", visits: 2 },
-    { date: "2024-06-04", visits: 1 },
-    { date: "2024-06-05", visits: 0 },
-    { date: "2024-06-06", visits: 1 },
-    { date: "2024-06-07", visits: 1 },
-  ];
+  function getLast7Days() {
+  const fixedVisits = [0, 2, 1, 3, 1, 0, 1]; // hard-coded visits
+  const result = [];
+  const today = new Date();
+
+  for (let i = 6; i >= 0; i--) {
+    const day = new Date(today);
+    day.setDate(today.getDate() - i);
+
+    const dateStr = day.toISOString().split("T")[0]; // YYYY-MM-DD format
+
+    result.push({
+      date: dateStr,
+      visits: fixedVisits[6 - i], // match visits with each day
+    });
+  }
+
+  return result;
+}
+  const userVisitData = getLast7Days();
 
   // A simple utility to get a dynamic greeting based on the time of day
   const getGreeting = () => {
