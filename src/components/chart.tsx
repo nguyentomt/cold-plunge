@@ -41,14 +41,14 @@ export default function ColdPlungeChart({ data }: Props) {
         <defs>
           <linearGradient id="lineGradient" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stopColor="blue" />
-            <stop offset="50%" stopColor="orange" />
-            <stop offset="100%" stopColor="red" />
+            <stop offset="50%" stopColor="pink" />
+            <stop offset="100%" stopColor="purple" />
           </linearGradient>
           {/* Gradient for the area fill */}
           <linearGradient id="areaGradient" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="blue" stopOpacity={0.4} />
-            <stop offset="50%" stopColor="orange" stopOpacity={0.2} />
-            <stop offset="100%" stopColor="red" stopOpacity={0} />
+            <stop offset="0%" stopColor="purple" stopOpacity={0.4} />
+            <stop offset="50%" stopColor="pink" stopOpacity={0.2} />
+            <stop offset="100%" stopColor="pink" stopOpacity={0.1} />
           </linearGradient>
         </defs>
 
