@@ -195,7 +195,7 @@ export default function ConditionalDashboard() {
                 </h2>
 
                 <div className="text-3xl font-bold text-green-600 mb-4">
-                  112.358 LDV
+                  112.3 LDV
                 </div>
 
                 <Grid>
