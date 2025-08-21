@@ -1,6 +1,7 @@
 // lib/WalletContext.tsx
 "use client";
 import { createContext, useState, useContext, ReactNode } from "react";
+import "@/lib/web3modal";
 
 type WalletContextType = {
   account: string | null;

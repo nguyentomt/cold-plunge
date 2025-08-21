@@ -18,18 +18,19 @@ import Grid from "@mui/material/Grid";
 import Tooltip from "@mui/material/Tooltip";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 import { formatAddress, getEthBalance, getLDVBalanceSafe } from "../lib/utils";
+import { useWeb3ModalAccount } from "@web3modal/ethers/react";
 
 export default function ConditionalDashboard() {
-  const { account } = useWallet();
+  const { address, isConnected } = useWeb3ModalAccount();
   const [eth, setEth] = useState<string | null>(null);
   const [ldv, setLdv] = useState<string | null>(null);
 
   useEffect(() => {
-    if (account) {
-      getEthBalance(account).then(setEth).catch(console.error);
-      getLDVBalanceSafe(account).then(setLdv).catch(console.error);
+    if (address) {
+      getEthBalance(address).then(setEth).catch(console.error);
+      getLDVBalanceSafe(address).then(setLdv).catch(console.error);
     }
-  }, [account]);
+  }, [address]);
 
   function getLast7Days() {
     const fixedVisits = [0, 2, 1, 3, 1, 0, 1]; // hard-coded visits
@@ -94,7 +95,7 @@ export default function ConditionalDashboard() {
             <div className="flex items-center space-x-2">
               <AccountCircleIcon className="text-blue-500" />
               <span className="font-medium text-gray-700">
-                {formatAddress(account)}
+                {formatAddress(address)}
               </span>
             </div>
           </div>
@@ -251,7 +252,7 @@ export default function ConditionalDashboard() {
     );
   };
 
-  if (account) {
+  if (address) {
     return <Dashboard />;
   }
 

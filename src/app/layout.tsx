@@ -7,10 +7,11 @@ import { Analytics } from "@vercel/analytics/react";
 import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
-import { WalletProvider } from "@/lib/WalletContext";
+import { WalletProvider } from "@/lib/WalletContext"; // (use for MetaMask)
+// import { Providers } from "@/lib/providers"; // use for UniSwap
 // import BubblesContainer from "@/components/bubbleContainer";
 
-const mulish = Mulish({ weight: ["600", "700"], subsets: ["latin"] });
+const mulish = Mulish({ weight: ["600", "700", "800"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Meta Labs Cold Plunge",

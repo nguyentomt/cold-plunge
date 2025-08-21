@@ -57,6 +57,12 @@ contract LDVPayment {
         owner = newOwner;
     }
 
+    function claimLDV(uint256 amount) public {
+        IERC20 token = IERC20(ldvToken);
+        require(token.balanceOf(address(this)) >= amount, "LDV faucet dry");
+        require(token.transfer(msg.sender, amount), "Transfer failed");
+}
+
     function getContractBalance() public view returns (uint256) {
         return IERC20(ldvToken).balanceOf(address(this));
     }
