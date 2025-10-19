@@ -41,7 +41,7 @@ export const ConnectWalletButton = () => {
       throw new Error("MetaMask not found. Please install MetaMask.");
     }
 
-    const ethersProvider = new ethers.BrowserProvider(provider);
+    const ethersProvider = new ethers.BrowserProvider(provider as any);
     const accounts = await ethersProvider.send("eth_requestAccounts", []);
     setAccount(accounts[0]);
     } catch (err) {
@@ -62,7 +62,7 @@ export const ConnectWalletButton = () => {
   useEffect(() => {
     const checkConnected = async () => {
       if (!window.ethereum) return;
-      const provider = new ethers.BrowserProvider(window.ethereum);
+      const provider = new ethers.BrowserProvider(window.ethereum as any);
       const accounts = await provider.send("eth_accounts", []);
       if (accounts.length > 0) setAccount(accounts[0]);
     };
