@@ -16,7 +16,7 @@ const Location = () => {
 
         {/* <Map setMap={setMap} /> */}
         <div className="flex gap-8 justify-center p-4"><a href="tel:7146586379">📞  714 658 6379</a>
-        <p>⌛ 9am-7pm</p></div>
+        <p>⌛ 7am-7pm</p></div>
 
 
         <div>

@@ -144,17 +144,17 @@ export default async function Home() {
   return (
     <section className="flex flex-col gap-4 items-center pt-28 lg:pt-32 overflow-clip z-40">
       <div className="w-4/5 lg:w-1/3">
-        <div className="w-full bg-red-950 opacity-70 lg:text-xl p-4 rounded-3xl text-gray-100 text-justify">
-          Meta labs is a communal space designed for training and sharing of
+        <div className="w-full bg-yellow-700 opacity-70 lg:text-xl p-4 rounded-3xl text-gray-100 text-justify">
+          {/* Meta labs is a communal space designed for training and sharing of
           experiences relating to the basics of hot and cold practices and their
           respective effects on the human body. We believe this knowledge is
           every man’s responsibility to behold in effort to uplift the health of
           our global communities. With that said, we would like to invite you to
           join us on this journey of work, knowledge and better mental awareness
-          today. - Meta Labs Cold Plunge
+          today. - Meta Labs Cold Plunge */}
           <p className="mt-4 mb-2 z-20 text-center">
             <Link href="/book" className="text-gray-100 font-extrabold">
-              BOOK YOUR VISIT HERE.
+              SCHEDULE YOUR VISIT HERE.
             </Link>
           </p>
         </div>

@@ -23,7 +23,7 @@ export const formatChainAsNum = (chainIdHex: string) => {
 
 
 export async function getEthBalance(account: string) {
-  const provider = new ethers.BrowserProvider(window.ethereum);
+  const provider = new ethers.BrowserProvider(window.ethereum as any);
   const balance = await provider.getBalance(account);
   return ethers.formatEther(balance);
 }
@@ -42,7 +42,7 @@ export async function getLDVBalanceSafe(account?: string): Promise<string | null
   }
 
   try {
-    const provider = new ethers.BrowserProvider(window.ethereum);
+    const provider = new ethers.BrowserProvider(window.ethereum as any);
     const contract = new ethers.Contract(NEXT_PUBLIC_LDV_TOKEN_ADDRESS, LDV_ABI, provider);
 
     const [rawBalance, decimals] = await Promise.all([
