@@ -18,8 +18,8 @@ const Footer = () => {
                     <p className="pb-4 text-xl">Hours</p>
                     <div className="text-sm leading-loose">
                         Closed Mondays<br/>
-                        9:00am - 7pm Tues-Fri<br/>
-                        9:00am - 5pm Weekends
+                        7:00am - 7pm Tues-Fri<br/>
+                        7:00am - 5pm Weekends
                     </div>
                 </article>
 
