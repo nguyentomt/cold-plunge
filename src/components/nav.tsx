@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -26,6 +26,17 @@ export default function Nav() {
     setOpen(!isOpen);
   };
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
+
   const navItems = [
     // {
     //   title: "home",
@@ -42,7 +53,7 @@ export default function Nav() {
     //     },
     //   ],
     {
-      title: "community",
+      title: "Community",
       href: "/community",
       //   options: [
       //     {
@@ -56,11 +67,11 @@ export default function Nav() {
       //   ],
     },
     {
-      title: "gallery",
+      title: "Gallery",
       href: "/gallery",
     },
     {
-      title: "services",
+      title: "Services",
       href: "/services",
     },
     {
@@ -69,15 +80,15 @@ export default function Nav() {
     },
     {
       title: "ML Protocol",
-      href: "/protocol",
+      href: "#",
     },
     {
-      title: "training",
-      href: "/training",
+      title: "Training",
+      href: "#",
     },
     {
-      title: "employment",
-      href: "/employment",
+      title: "Employment",
+      href: "#",
     },
     // {
     //   title: "Book Now",
@@ -90,7 +101,7 @@ export default function Nav() {
       id="nav-container"
       className={` ${
         isOpen ? "bg-gray-200 bg-opacity-90" : ""
-      } mt-4 w-screen absolute z-40 flex flex-col items-center`}
+      } w-screen absolute z-40 flex flex-col items-center`}
     >
       <nav
         className={` bg-opacity-10 overflow- ${
@@ -164,20 +175,22 @@ export default function Nav() {
             </button>
           </div>
 
-          <div>
+          <div className="w-full flex-1 flex flex-col">
             {isOpen ? (
-              <div className="flex flex-col w-full">
+              <div className="flex flex-col w-full flex-1 justify-center items-center">
                 {navItems.map((e, i) => {
                   return (
-                    <div key={i} className="text-center">
+                    <div key={i} className="text-center flex-1 flex items-center justify-center w-full">
                       <Link
                         key={i}
                         id={e.title}
                         href={e.href}
-                        onMouseDown={() => setItem(i)}
-                        onMouseUp={() => toggleMobileMenu()}
-                        className={`py-1 text-xl ${
-                          i == item ? `text-gray-200` : `text-gray-900`
+                        onClick={() => {
+                          setItem(i);
+                          toggleMobileMenu();
+                        }}
+                        className={`text-4xl ${
+                          i == item ? `text-blue-600` : `text-gray-900`
                         } font-extrabold transition duration-500 hover:shadow-md`}
                       >
                         {e.title}
